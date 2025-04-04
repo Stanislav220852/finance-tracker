@@ -25,7 +25,7 @@ class TransactionModel(Base):
     user_id: Mapped[int] = mapped_column(ForeignKey("usermodels.id"))
     account_id: Mapped[int] = mapped_column(ForeignKey("accountmodels.id"))
     category_id: Mapped[int] = mapped_column(ForeignKey("categorymodels.id"), nullable=True)
-    debt_id: Mapped[int] = mapped_column(ForeignKey("debtmodels.id"), nullable=True)
+    debt_id: Mapped[int] = mapped_column(ForeignKey("deptmodels.id"), nullable=True)
 
     user: Mapped["UserModel"] = relationship(back_populates="transactions")
     account: Mapped["AccountModel"] = relationship(back_populates="transactions")

@@ -7,7 +7,7 @@ import uvicorn
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    await create_table()
+    
     yield
     print("Выключение")
     

@@ -9,20 +9,20 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
     restart: always
     ports:
-      - 5432:5432
+      - 5555:5432
     env_file:
       - .env
 
 
   pgadmin:
     image: dpage/pgadmin4
-    container_name: pgadmin
+    container_name: pgadmin4
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.com
       PGADMIN_DEFAULT_PASSWORD: admin123
     restart: always
     ports:
-      - 8080:80
+      - 9090:80
     env_file:
       - .env
   

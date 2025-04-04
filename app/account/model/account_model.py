@@ -21,4 +21,4 @@ class AccountModel(Base):
     currency: Mapped[str] = mapped_column(String(3))  # RUB, USD, EUR
     balance: Mapped[float] = mapped_column(default=0.0)
     is_archived: Mapped[bool] = mapped_column(default=False)
-    user_id: Mapped[int] = mapped_column(ForeignKey("usernodels.id"))
+    user_id: Mapped[int] = mapped_column(ForeignKey("usermodels.id"))
