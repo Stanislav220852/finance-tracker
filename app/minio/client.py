@@ -7,6 +7,6 @@ client = Minio("localhost:9000",
     secure= False
 )
 
-bucket_name = "crud"
+bucket_name = "Minio"
 if not client.bucket_exists(bucket_name):
     client.make_bucket(bucket_name)
